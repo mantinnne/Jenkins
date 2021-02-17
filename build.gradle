@@ -33,8 +33,17 @@ test {
     useJUnitPlatform()
 }
 
+test {
+    useJUnitPlatform()
+}
+
 task positive_test(type: Test) {
     useJUnitPlatform {
         includeTags 'positive'
+    }
+}
+task negative_test(type: Test) {
+    useJUnitPlatform {
+        includeTags 'negative'
     }
 }

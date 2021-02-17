@@ -16,6 +16,8 @@ public class SimpleTests {
     }
 
     @Test
+    @Tag("negative")
+
     void negativeTest() {
         assertTrue(false);
     }
@@ -27,6 +29,7 @@ public class SimpleTests {
     }
 
     @Test
+    @Tag("negative")
     void negativeWithHamcrestTest() {
         assertThat(true, is(false));
     }
@@ -40,7 +43,7 @@ public class SimpleTests {
     }
 
     @Test
-    @DisplayName("Some negative test")
+    @Tag("negative")
     void negativeWithHamcrestAndStepsTest() {
         step("Assert that true is false", () ->
                 assertThat(true, is(false)));
